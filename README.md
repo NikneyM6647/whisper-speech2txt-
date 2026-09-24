@@ -9,7 +9,7 @@ faster-whisper>=1.0.0
 ctranslate2>=4.0.0
 av>=10.0.0
 
-# 1. Chocolaty installation
+# 1. Chocolaty installation(powerShell(ADMINS))
 
   ```
   Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -21,13 +21,15 @@ av>=10.0.0
    
 # 2. FFmpeg in PATH on Windows
    
-  ```where.exe ffmpeg -----  find out and copy the path```
+  ```
+  where.exe ffmpeg -----  find out and copy the path
+  ```
 
 # 3. Change the path to your own.
    
   ```
   $ffmpegPath = "C:\ffmpeg\bin
-  "``
+  ```
 
   ```
   [Environment]::SetEnvironmentVariable("Path", $env:Path + ";$ffmpegPath", "Machine")
